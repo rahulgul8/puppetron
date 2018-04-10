@@ -83,7 +83,7 @@ require('http').createServer(async (req, res) => {
 
   let page, pageURL;
   try {
-    if (!/^https?:\/\//i.test(url)) {
+    if (!/^https?:\/\/?/i.test(url)) {
       throw new Error('Invalid URL');
     }
 
